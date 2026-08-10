@@ -11,6 +11,12 @@
 \usepackage{graphicx} % for header_with_photo. avatar
 % \usepackage{tabularray} % for header_with_photo
 
+% Keep the readable 11pt body text while reducing unused vertical space.
+\geometry{top=0.75in}
+\titlespacing*{\section}{0cm}{*1.35}{*1.15}
+\titlespacing*{\subsection}{0cm}{*1.35}{*0.4}
+\setlist[itemize]{topsep=0.12em, leftmargin=1.25pc}
+
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
