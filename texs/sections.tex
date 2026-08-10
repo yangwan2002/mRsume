@@ -4,19 +4,19 @@
 \datedsubsection{\texthl{南昌航空大学} / \textit{物联网工程} / \textit{本科}}{2020 -- 2024}
 
 \sectionTitle{实习经历}{\faiconsixbf{briefcase}}
-\datedsubsection{\texthl{携程集团} / \textit{后端开发助理}}{2026.03 -- 2026.08}
+\datedsubsection{\texthl{携程集团} / \textit{后端开发助理}}{2026.03 -- 至今}
 \textbf{技术栈：}Python, FastAPI, MySQL, Redis, QMQ, FaaS, GitLab CI/CD
 
 \textbf{AgentGo 一站式 Agent 开发与发布平台}
 \begin{itemize}
-	\item 参与携程模型评测平台 MEP 的 AgentGo 模块建设，面向公司内部用户提供\textbf{零代码与高代码}两类 Agent 开发模式：零代码模式支持 Prompt、知识库、MCP 与 Skill 等能力配置，高代码模式支持代码、模板及工作流开发，覆盖从快速配置到复杂 Agent 定制的多类开发场景。
+	\item 参与携程模型评测平台 MEP 的 AgentGo 模块建设，负责 Agent 生命周期及 MCP/Skill 扩展能力。支持 Prompt、知识库、MCP、Skill 等零代码配置与高代码化 Agent 开发，覆盖从快速配置到复杂 Agent 定制的多类开发场景。
 	\item 打通 Agent 从配置到发布的自动化交付链路，串联 FaaS 函数创建、GitLab 仓库初始化、运行配置生成、代码同步及 CI 发布；建设全生命周期 API，并通过状态机、超时控制与失败重试保障交付可靠性。
-	\item 建设 MCP 与 Skill 扩展机制：MCP 支持自动创建服务或注册已有 Server 并同步工具列表；Skill 支持 GitLab 源码同步、格式校验、广场发布及运行时动态加载，便于复用平台能力与接入自定义工具。
+	\item 建设 MCP 与 Skill 插件体系：MCP 支持自动创建服务或注册已有 Server 并同步工具列表；Skill 支持 GitLab 源码同步、格式校验、广场发布及运行时动态加载，便于复用平台能力与接入自定义工具。
 \end{itemize}
 
 \textbf{UI 自动化调度服务}
 \begin{itemize}
-	\item 独立设计并落地 UI 自动化调度服务，以 \textbf{Job-Task-Record} 模型统一任务拆分、真机执行、结果回写与数据导出，接入大搜、TG、问道等业务，\textbf{日均处理数据超过 2 万条}。
+	\item 参与MEP平台数据采集模块能力建设，独立设计并落地 UI 自动化调度服务，以 \textbf{Job-Task-Record} 模型统一任务拆分、真机执行、结果回写与数据导出，接入大搜、TG、问道等业务，\textbf{日均处理数据超过 2 万条}。
 	\item 面向 \textbf{100+ 台设备}构建设备池调度机制，结合来源绑定、设备心跳、健康标记、池内负载均衡及失败任务迁移，将设备平均利用率由不足 \textbf{20\%} 提升至约 \textbf{82\%}。
 	\item 打通 MEP 数据集的 \textbf{QMQ} 流式接入链路，基于 Redis 消息去重和 MySQL 状态持久化保证任务幂等；完善未完成数据迁移重试、设备与任务监控及飞书告警，增强异常恢复与问题定位能力。
 \end{itemize}
@@ -24,8 +24,8 @@
 \sectionTitle{项目经历}{\faiconsixbf{users}}
 
 
-\datedsubsection{\textbf{AcademicAgent：可控学术论文写作 Agent}}{2026.07 -- 至今}
-\textbf{技术栈：}Python, OpenAI/Anthropic API, OpenAlex, Crossref, python-docx, Langfuse, Pytest
+\datedsubsection{\textbf{AcademicAgent：可控学术论文写作 Agent}}{2026.06 -- 至今}
+\textbf{技术栈：}Python, Workflow, Agent, Harness Engineer, Langfuse, Pytest
 
 \textbf{项目描述：}面向 LaTeX、Markdown 与 Word 学术文档构建可控写作 Agent，支持自然语言驱动的润色、改写、新增章节、格式转换与排版。
 
@@ -40,13 +40,13 @@
 
 \newpage
 \datedsubsection{\textbf{C++ 高性能服务器框架与 WebSocket IM 系统}}{2025.06 -- 2025.10}
-\textbf{技术栈：}C++17, Linux, Epoll, Reactor, 协程, Hook, Socket/TCP, WebSocket, Redis, MySQL
+\textbf{技术栈：}C++11, Linux, Epoll, Reactor, 协程, Hook, Socket/TCP, WebSocket, Redis, MySQL
 
-\textbf{项目描述：}参考 Sylar 架构完成高性能服务器框架核心模块，并基于该框架开发 WebSocket IM 系统，验证协程化网络框架在长连接业务中的应用。
+\textbf{项目描述：}完成高性能服务器框架核心模块，并基于该框架开发 WebSocket IM 系统，验证协程化网络框架在长连接业务中的应用。
 
 \textbf{项目亮点：}
 \begin{itemize}
-	\item 基于 C++17 完成框架核心架构，采用 \textbf{Epoll ET} 实现 IO 多路复用，完成协程调度器、IOManager、定时器及 Socket/TCP 等网络模块。
+	\item 基于 C++11 完成框架核心架构，采用 \textbf{Epoll ET} 实现 IO 多路复用，完成协程调度器、IOManager、定时器及 Socket/TCP 等网络模块。
 	\item 通过 \textbf{Hook} 改造 read、write、connect 等阻塞式系统调用，将同步编程接口转换为协程化异步执行，降低网络服务开发复杂度。
 	\item 基于框架实现 WebSocket IM 系统，覆盖注册登录、Token 鉴权、好友管理、单聊/群聊、消息 ACK、在线会话管理与断连清理。
 	\item 使用 Redis 管理在线状态、会话列表及未读计数，使用 MySQL 持久化消息与关系数据，并实现连接池、预编译查询、事务回滚和离线消息拉取。
@@ -56,7 +56,7 @@
 	\begin{itemize}
 		\item 熟悉大模型应用与 Agent 工程化开发，掌握 Workflow、工具调用、MCP 与 RAG；具备检索与引用核验、生成/校验分离、调用预算及 Langfuse 可观测性实践；
 		\item 熟练使用 Python、FastAPI、异步编程与 Pydantic，熟悉 MySQL、Redis 及常见缓存、队列和服务化场景；
-		\item 熟悉 C++17、STL 与协程，掌握 Reactor、Epoll ET、Socket/TCP/WebSocket 网络编程及连接池设计；
+		\item 熟悉 C++11、STL 与协程，掌握 Reactor、Epoll ET、Socket/TCP/WebSocket 网络编程及连接池设计；
 		\item 理解 Transformer、BERT 等模型基础架构，熟悉 Git/GitLab CI/CD；英语 CET-6，具备良好的英文技术文档阅读能力；
 	\end{itemize}
 \end{onehalfspacing}
