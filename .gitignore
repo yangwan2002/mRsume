@@ -1,0 +1,72 @@
+# Copy this file to the Git repository and rename it ".gitignore".
+# Lines starting with '#' are treated as comments.
+
+############################################
+## USER SCRIPTS AND NOTES
+############################################
+
+/*.bat
+/\!*
+.DS_Store
+*.pdf
+
+############################################
+## LATEX TEMPORARY FILES
+############################################
+
+*.log
+*.aux
+*.bbl
+*.blg
+*.tex.undo
+*.tex.bak
+*.~te
+*.$te
+*.DVX
+*.DDF
+*.synctex.gz
+*.synctex.gz(busy)
+*.fdb_latexmk
+*.fls
+*.out
+*.toc
+*.lof
+*.lot
+*.idx
+*.ilg
+*.ind
+
+*.dvi
+*.ps
+
+############################################
+# do not upload secret infomation
+myresume.tex
+myresume.pdf
+myresume-zh_CN.tex
+myresume-zh_CN.pdf
+
+build/
+temp/
+
+############################################
+## LOCAL / PRIVATE CONTENT
+############################################
+
+# Internal project notes are not part of the public resume repository.
+project/
+
+# Unused template assets are kept locally but omitted from the personal repo.
+cites/
+images/
+fonts/NotoSansSC/
+fonts/NotoSerifCJKsc/
+stys/NotoSansSC_external.sty
+stys/NotoSerifCJKsc_external.sty
+
+# Local render and test artifacts.
+tmp/
+
+# Publish only the current photo resume PDF.
+output/pdf/*
+!output/pdf/万洋-简历-2026-照片版.pdf

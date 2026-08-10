@@ -1,0 +1,72 @@
+\sectionTitle{教育背景}{\faiconsixbf{graduation-cap}}
+\datedsubsection{\texthl{南昌大学} / \textit{计算机技术} / \textit{硕士}}{2024 -- 2027}
+\vspace{-3pt}
+\datedsubsection{\texthl{南昌航空大学} / \textit{物联网工程} / \textit{本科}}{2020 -- 2024}
+
+\sectionTitle{实习经历}{\faiconsixbf{briefcase}}
+\datedsubsection{\texthl{携程集团} / \textit{后端开发助理}}{2026.03 -- 2026.08}
+\textbf{技术栈：}Python, FastAPI, MySQL, Redis, QMQ, FaaS, GitLab CI/CD
+
+\textbf{AgentGo 一站式 Agent 开发与发布平台}
+\begin{itemize}
+	\item 参与携程模型评测平台 MEP 的 AgentGo 模块建设，面向公司内部用户提供\textbf{零代码与高代码}两类 Agent 开发模式：零代码模式支持 Prompt、知识库、MCP 与 Skill 等能力配置，高代码模式支持代码、模板及工作流开发，覆盖从快速配置到复杂 Agent 定制的多类开发场景。
+	\item 设计并打通 Agent 从配置到发布的自动化交付链路，串联 FaaS 函数创建、GitLab 仓库初始化、运行配置生成、代码异步同步、CI 构建及应用发布等流程；建设 Agent 创建、更新、发布、删除等全生命周期 API，并通过状态机、超时控制与失败重试机制保障交付流程的稳定性与可靠性。
+	\item 完善 Agent 扩展能力与复用机制：MCP 支持自动创建服务或注册已有 Server，并自动同步工具列表；Skill 支持 GitLab 源码同步、格式校验、广场发布及运行时动态下载加载，使用户能够复用平台能力并灵活接入自定义工具与能力。
+\end{itemize}
+
+\textbf{UI 自动化调度服务}
+\begin{itemize}
+	\item 独立设计并落地 UI 自动化调度服务，以 \textbf{Job-Task-Record} 模型统一任务拆分、真机执行、结果回写与数据导出，接入大搜、TG、问道等业务，\textbf{日均处理数据超过 2 万条}。
+	\item 面向 \textbf{100+ 台设备}构建设备池调度机制，结合来源绑定、设备心跳、健康标记、池内负载均衡及失败任务迁移，将设备平均利用率由不足 \textbf{20\%} 提升至约 \textbf{82\%}。
+	\item 打通 MEP 数据集的 \textbf{QMQ} 流式接入链路，基于 Redis 消息去重和 MySQL 状态持久化保证任务幂等；完善未完成数据迁移重试、设备与任务监控及飞书告警，增强异常恢复与问题定位能力。
+\end{itemize}
+
+\sectionTitle{项目经历}{\faiconsixbf{users}}
+
+
+\datedsubsection{\textbf{AcademicAgent：可控学术论文写作 Agent}}{2026.07 -- 至今}
+\textbf{技术栈：}Python, OpenAI/Anthropic API, OpenAlex, Crossref, python-docx, Langfuse, Pytest
+
+\textbf{项目描述：}面向 LaTeX、Markdown 与 Word 学术文档构建可控写作 Agent，支持自然语言驱动的润色、改写、新增章节、格式转换与排版。
+
+\textbf{项目亮点：}
+\begin{itemize}
+	\item 设计意图驱动的规划执行架构，将用户请求拆分为结构化 Operation，通过槽位抽取、缺失信息澄清、计划校验与自修复组织多步骤任务，并支持执行失败后的重规划与回滚。
+	\item 构建面向引用可信性的文献检索闭环，串联 \textbf{OpenAlex 检索、Crossref 交叉核验、Reviewer LLM 相关性判定、去重与配额控制}；采用 Writer/Reviewer 分离并生成 Evidence Bundle，降低无关文献与不可验证引用进入写作链路的风险。
+	\item 建立 Working Copy 隔离与 \textbf{Diff Gate} 机制，对引用、数值、公式、标题层级及占位符进行确定性校验；结合基线快照、Undo 与原子写入，避免模型输出直接污染源文档，并兼容 tex、md、docx 格式。
+	\item 建设事件总线与可观测链路，将 LLM、检索、校验及文件写入过程落盘并接入 \textbf{Langfuse}；引入调用预算、超时、退避重试及 GitHub Actions/Pytest 回归，核心写作、检索与追踪链路 \textbf{148 项测试通过}。
+\end{itemize}
+
+
+\newpage
+\datedsubsection{\textbf{Sylar 高性能服务器框架复现与 WebSocket IM 系统}}{2025.06 -- 2025.10}
+\textbf{技术栈：}C++17, Linux, Epoll, Reactor, 协程, Hook, Socket/TCP, WebSocket, Redis, MySQL
+
+\textbf{项目描述：}复现 Sylar 高性能服务器框架的核心模块，并基于该框架开发 WebSocket IM 系统，验证协程化网络框架在长连接业务中的应用。
+
+\textbf{项目亮点：}
+\begin{itemize}
+	\item 基于 C++17 复现 Sylar 核心架构，采用 \textbf{Epoll ET} 实现 IO 多路复用，完成协程调度器、IOManager、定时器及 Socket/TCP 等网络模块。
+	\item 通过 \textbf{Hook} 改造 read、write、connect 等阻塞式系统调用，将同步编程接口转换为协程化异步执行，降低网络服务开发复杂度。
+	\item 基于框架实现 WebSocket IM 系统，覆盖注册登录、Token 鉴权、好友管理、单聊/群聊、消息 ACK、在线会话管理与断连清理。
+	\item 使用 Redis 管理在线状态、会话列表及未读计数，使用 MySQL 持久化消息与关系数据，并实现连接池、预编译查询、事务回滚和离线消息拉取。
+\end{itemize}
+\sectionTitle{专业技能}{\faiconsixbf{gears}}
+\begin{onehalfspacing}
+	\begin{itemize}
+		\item 熟悉大模型应用与 Agent 工程化开发，掌握 Workflow、工具调用、MCP 与 RAG 检索增强；具备检索与引用核验、生成/校验分离、调用预算及 Langfuse 可观测性实践；
+		\item 熟悉Transformer、BERT等大模型基础架构与核心原理，了解大模型异步调用、请求缓存等性能优化手段；
+		\item 精通 Pydantic强类型数据建模，掌握大模型接口参数校验、非结构化响应解析的工程化方法；
+		\item 熟练使用C++11，掌握STL容器底层数据结构、协程开发；精通Python，掌握FastAPI后端开发、异步编程；
+		\item 精通Reactor主从模型、Epoll IO多路复用，熟悉Socket/TCP/WebSocket网络编程，掌握多线程、连接池、内存池设计；
+		\item 熟悉MySQL基础查询与优化，掌握Redis五种基本数据结构及缓存、队列等实战场景；
+		\item 掌握FastAPI服务化部署，熟悉异步处理、请求缓存等接口性能优化手段，了解大模型应用单机并发调优方法；
+		\item 英语CET-6，具备良好的英文文档阅读能力；
+	\end{itemize}
+\end{onehalfspacing}
+
+
+\sectionTitle{自我评价}{\faiconsixbf{comment}}
+\begin{onehalfspacing}
+	\normalline{具备较扎实的后端与系统开发基础，能够独立完成 Agent 工作流、检索与引用链路及服务端系统的设计实现；对大模型应用工程化落地有持续兴趣，学习主动性强，具备良好的代码习惯与问题定位能力。}
+\end{onehalfspacing}
