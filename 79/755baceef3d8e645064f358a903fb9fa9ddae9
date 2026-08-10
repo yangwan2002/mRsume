@@ -1,0 +1,19 @@
+texs/header_with_photo.tex
+  s_dc70ed8ccdbbb5::t_3a4263a7cc68f9 8-9,17-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "79755baceef3d8e645064f358a903fb9fa9ddae9",
+  "prompts": {},
+  "sessions": {
+    "s_dc70ed8ccdbbb5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fb6d7-92ab-75f2-8d17-fb7ee5e785e9",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "yangwan2002 <2750064896@qq.com>"
+    }
+  }
+}
