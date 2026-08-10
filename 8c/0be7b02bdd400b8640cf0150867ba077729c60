@@ -1,0 +1,21 @@
+texs/sections.tex
+  s_dc70ed8ccdbbb5::t_4184a77eb178cc 13-14,36,44,48,56-59
+texs/header_with_photo.tex
+  s_dc70ed8ccdbbb5::t_fe069618e7c8fb 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "8c0be7b02bdd400b8640cf0150867ba077729c60",
+  "prompts": {},
+  "sessions": {
+    "s_dc70ed8ccdbbb5": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fb6d7-92ab-75f2-8d17-fb7ee5e785e9",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "yangwan2002 <2750064896@qq.com>"
+    }
+  }
+}
