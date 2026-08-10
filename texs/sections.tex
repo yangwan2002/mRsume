@@ -39,14 +39,14 @@
 
 
 \newpage
-\datedsubsection{\textbf{Sylar 高性能服务器框架复现与 WebSocket IM 系统}}{2025.06 -- 2025.10}
+\datedsubsection{\textbf{C++ 高性能服务器框架与 WebSocket IM 系统}}{2025.06 -- 2025.10}
 \textbf{技术栈：}C++17, Linux, Epoll, Reactor, 协程, Hook, Socket/TCP, WebSocket, Redis, MySQL
 
-\textbf{项目描述：}复现 Sylar 高性能服务器框架的核心模块，并基于该框架开发 WebSocket IM 系统，验证协程化网络框架在长连接业务中的应用。
+\textbf{项目描述：}设计并完成高性能服务器框架的核心模块，并基于该框架开发 WebSocket IM 系统，验证协程化网络框架在长连接业务中的应用。
 
 \textbf{项目亮点：}
 \begin{itemize}
-	\item 基于 C++17 复现 Sylar 核心架构，采用 \textbf{Epoll ET} 实现 IO 多路复用，完成协程调度器、IOManager、定时器及 Socket/TCP 等网络模块。
+	\item 基于 C++11 完成框架核心架构，采用 \textbf{Epoll ET} 实现 IO 多路复用，完成协程调度器、IOManager、定时器及 Socket/TCP 等网络模块。
 	\item 通过 \textbf{Hook} 改造 read、write、connect 等阻塞式系统调用，将同步编程接口转换为协程化异步执行，降低网络服务开发复杂度。
 	\item 基于框架实现 WebSocket IM 系统，覆盖注册登录、Token 鉴权、好友管理、单聊/群聊、消息 ACK、在线会话管理与断连清理。
 	\item 使用 Redis 管理在线状态、会话列表及未读计数，使用 MySQL 持久化消息与关系数据，并实现连接池、预编译查询、事务回滚和离线消息拉取。
