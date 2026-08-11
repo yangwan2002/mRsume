@@ -4,7 +4,7 @@
 \datedsubsection{\texthl{南昌航空大学} / \textit{物联网工程} / \textit{本科}}{2020 -- 2024}
 
 \sectionTitle{实习经历}{\faiconsixbf{briefcase}}
-\datedsubsection{\texthl{携程集团} / \textit{后端开发助理}}{2026.03 -- 至今}
+\datedsubsection{\texthl{携程集团} / \textit{AI应用开发实习生}}{2026.03 -- 至今}
 \textbf{技术栈：}Python, FastAPI, MySQL, Redis, QMQ, FaaS, GitLab CI/CD
 
 \textbf{AgentGo 一站式 Agent 开发与发布平台}
@@ -24,7 +24,7 @@
 \sectionTitle{项目经历}{\faiconsixbf{users}}
 
 
-\datedsubsection{\textbf{AcademicAgent：可控学术论文写作 Agent}}{2026.06 -- 至今}
+\datedsubsection{\textbf{AcademicAgent：可控学术论文写作 Agent}}{2026.02 -- 至今}
 \textbf{技术栈：}Python, Workflow, Agent, Harness Engineer, Langfuse, Pytest
 
 \textbf{项目描述：}面向 LaTeX、Markdown 与 Word 学术文档构建可控写作 Agent，支持自然语言驱动的润色、改写、新增章节、格式转换与排版。
@@ -34,7 +34,7 @@
 	\item 设计意图驱动的规划执行架构，将自然语言需求拆解为原子要求与有序 Operation，结构化维护目标、约束、引用配额及执行状态；结合缺失信息澄清、计划校验与有界重规划，将模糊需求收敛为可执行计划。
 	\item 将 \textbf{Function Calling 与 JSON Schema} 作为结构化抽取协议，为不同写作意图定义独立槽位模型；区分模型调用失败与字段缺失、歧义、非法等状态，避免模型臆造参数或静默丢失用户要求。
 	\item 构建可信文献检索闭环，串联 \textbf{OpenAlex 检索、Crossref 交叉核验、Reviewer LLM 相关性判定、去重与引用配额控制}；将核验文献组织为 Evidence Bundle 提供给 Writer，降低无关文献与不可验证引用进入写作结果的风险。
-	\item 建设有界运行框架（\textbf{Agent Harness}），由确定性 Python 流程编排生成、校验与文件写入；通过 \textbf{Diff Gate} 检查引用、数字、公式及文档结构，配合文档副本隔离与快照回滚保护源文件，并引入调用预算、超时重试及 \textbf{Langfuse} 全链路追踪。
+	\item 建设可控 \textbf{Agent Harness}，由确定性 Python 流程编排生成、校验与文件写入，通过调用预算、超时重试、\textbf{Diff Gate}、文档副本隔离及快照回滚约束模型输出；设计并实现 \textbf{EventBus/Span 可观测链路}，记录运行层级、耗时、重试与终态，支持 Trace 本地落盘及 Langfuse 导出。
 \end{itemize}
 
 
@@ -54,9 +54,9 @@
 \sectionTitle{专业技能}{\faiconsixbf{gears}}
 \begin{onehalfspacing}
 	\begin{itemize}
-		\item 熟悉大模型应用与 Agent 工程化开发，掌握 Workflow、工具调用、MCP 与 RAG；具备检索与引用核验、生成/校验分离、调用预算及 Langfuse 可观测性实践；
+		\item 熟悉大模型应用与 Agent 工程化开发，掌握 Workflow、工具调用、MCP 与 RAG；熟悉上下文工程与 Agent 记忆机制，具备结构化上下文组装、会话状态管理、跨会话记忆持久化、调用预算及 Langfuse 可观测性实践；
 		\item 熟练使用 Python、FastAPI、异步编程与 Pydantic，熟悉 MySQL、Redis 及常见缓存、队列和服务化场景；
-		\item 熟悉 C++11、STL 与协程，掌握 Reactor、Epoll ET、Socket/TCP/WebSocket 网络编程及连接池设计；
-		\item 理解 Transformer、BERT 等模型基础架构，熟悉 Git/GitLab CI/CD；英语 CET-6，具备良好的英文技术文档阅读能力；
+		\item 熟悉 C++11、STL 与协程, 具备 Linux 开发经验，掌握 Reactor、Epoll ET、Socket/TCP/WebSocket 网络编程及连接池设计；
+		\item 理解 Transformer、BERT 等模型基础架构，熟悉 Git、GitLab CI/CD；英语 CET-6，具备良好的英文技术文档阅读能力；
 	\end{itemize}
 \end{onehalfspacing}
